@@ -7,6 +7,7 @@ import { getBlogs } from '../../services/articles';
 import { useNavigate } from 'react-router-dom';
 import { ROUTER } from '../../constants/router';
 import { useFetchData } from '../../hooks/useFetchData';
+import Loding from '../../components/Loading';
 function ArticlePage() {
   const navigate = useNavigate();
 
@@ -23,19 +24,12 @@ function ArticlePage() {
         <Input placeholder="Search" />
       </Box>
       {loading ? (
-        <Box display="flex" justifyContent="center">
-          <Spinner
-            thickness="5px"
-            speed="0.4s"
-            emptyColor="gray.200"
-            color="teal"
-            size="xl"
-          />
-        </Box>
+        <Loding />
       ) : (
         <SimpleGrid columns={{ sm: 2 }} spacing="10" p="40px 20px">
           {data
             ?.filter((item) => item.id > 100)
+            .reverse()
             ?.map((item) => (
               <BlogCard
                 key={item.id}

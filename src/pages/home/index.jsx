@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, Image, Text } from '@chakra-ui/react';
 import Header from '../../components/Header';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { ROUTER } from '../../constants/router';
 import NavigationShow from '../../components/NavigationShow';
 function HomePage() {
