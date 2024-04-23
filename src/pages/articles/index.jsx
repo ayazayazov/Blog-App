@@ -19,14 +19,21 @@ function ArticlePage() {
     <>
       <Header />
 
-      <Box p="20px">
+      <Box
+        p="10px 20px"
+        position="sticky"
+        top={'92px'}
+        zIndex={1}
+        w={'100%'}
+        bg={'white'}
+      >
         <NavigationShow />
-        <Input placeholder="Search" />
+        <Input display={'flex'} placeholder="Search" />
       </Box>
       {loading ? (
         <Loding />
       ) : (
-        <SimpleGrid columns={{ sm: 2 }} spacing="10" p="40px 20px">
+        <SimpleGrid columns={{ sm: 2 }} spacing="10" p="10px 20px">
           {data
             ?.filter((item) => item.id > 100)
             .reverse()

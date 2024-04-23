@@ -19,7 +19,7 @@ function BlogCard({ title, desc, cover_url, created, id, onReadMore }) {
     >
       <Image
         objectFit="cover"
-        maxW={{ base: '100%', sm: '200px' }}
+        maxW={{ base: '100%', sm: '300px' }}
         src={cover_url}
         alt={title}
       />

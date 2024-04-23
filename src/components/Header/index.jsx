@@ -14,7 +14,7 @@ function Header() {
       display={'flex'}
       justifyContent={'space-between'}
       flexDirection="row"
-      p="20px"
+      p="10px 20px"
       position="sticky"
       top={'0'}
       w={'100%'}
